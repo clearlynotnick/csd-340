@@ -11,15 +11,23 @@ h1, h2, h3, h4 {
   padding: 10px;
 }
 
-a {
-  color: blue;
-  text-decoration: none;
-}
+a:link {
+
+    font-weight: bold;
+
+    font-size:1.25em;
+
+    color: #4F3674;
+
+    text-decoration: none;}
+
+a:visited{
+
+    color: crimson;}
 
 a:hover {
-  color: blue;
-}
 
-a:visited {
-  color: blue;
+    color: #D6A800;
+
+    text-decoration: underline;
 }
