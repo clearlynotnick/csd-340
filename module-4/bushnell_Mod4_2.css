@@ -1,0 +1,24 @@
+#container {
+    text-align: center;
+}
+
+h1, h3, figcaption {
+    color: rgba(255, 0, 0, 0.8); 
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+}
+
+.gallery-item {
+    text-align: center;
+    border: 1px solid rgba(255, 0, 0, 0.8); 
+    padding: 10px; 
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+}
