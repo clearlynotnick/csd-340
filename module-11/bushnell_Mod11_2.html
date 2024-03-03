@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Development with HTML and CSS</title>
+    <script>
+        let entries = [];
+
+        function addEntry() {
+            let entry = document.getElementById("entryField").value;
+            entries.push(entry);
+            alert("Added: " + entry);
+        }
+
+        function deleteLastEntry() {
+            if (entries.length > 0) {
+                let lastEntry = entries.pop();
+                alert("Deleted: " + lastEntry);
+            } else {
+                alert("Array is empty. No entry to delete.");
+            }
+        }
+
+        function displayEntries() {
+            let displayArea = document.getElementById("displayArea");
+            displayArea.innerHTML = "";
+            entries.forEach(function (entry, index) {
+                let entryNumber = index + 1;
+                let listItem = document.createElement("li");
+                listItem.textContent = entryNumber + ". " + entry;
+                displayArea.appendChild(listItem);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <p>Please enter in your item in the following text box. Once you have finished, click "add" to add it to your list. If you accidentally add the wrong item, you can click "Delete last entry" to remove it from your list. Once you are done, you can click "display" to display the contents of your list in the order that you put them in.</p>
+
+    <input type="text" id="entryField">
+    <button onclick="addEntry()">Add</button>
+    <button onclick="deleteLastEntry()">Delete Last Entry</button>
+    <button onclick="displayEntries()">Display</button>
+
+    <ul id="displayArea"></ul>
+
+    <footer>
+        <p><a href="../index.html" style="color: black;">Back to Landing Page</a></p>
+    </footer>
+
+</body>
+</html>
